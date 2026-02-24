@@ -227,7 +227,67 @@ a:hover {
         margin-bottom: 10px;    /* Add space between the stacked boxes */
     }
 }
-H
+/* ==========================================
+   Base Styles (Mobile First) 
+   - Apply to all devices, starting from phones
+   ========================================== */
+body {
+  font-size: 16px;
+  background-color: white;
+}
+
+/* ==========================================
+   Tablets & Large Phones (≥ 600px)
+   ========================================== */
+@media screen and (min-width: 600px) {
+  body {
+    background-color: #f0f0f0; /* Example change */
+  }
+  .container {
+    padding: 20px;
+  }
+}
+
+/* ==========================================
+   Laptops & Desktops (≥ 768px or 992px)
+   ========================================== */
+@media screen and (min-width: 768px) {
+  /* Often used for tablet landscape or small laptops */
+  .nav-menu {
+    display: flex; /* Turn hamburger menu into row */
+  }
+}
+
+@media screen and (min-width: 992px) {
+  /* Standard Desktop */
+  .sidebar {
+    display: block; /* Show sidebar only on desktop */
+  }
+}
+
+/* ==========================================
+   Large Screens / TV (≥ 1200px)
+   ========================================== */
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+}
+
+
+
+
+
+
+
+/* Only apply hover effects if the device actually supports hovering (like a mouse) */
+@media (hover: hover) {
+  .btn:hover {
+    background-color: blue;
+    transform: translateY(-2px);
+  }
+}
 
 
 

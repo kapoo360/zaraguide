@@ -899,3 +899,10 @@ p {
 
 
 
+/* Only apply hover effects if the device actually supports hovering (like a mouse) */
+@media (hover: hover) {
+  .btn:hover {
+    background-color: blue;
+    transform: translateY(-2px);
+  }
+}
